@@ -4,7 +4,7 @@ Unity JSON is an example Project on how to serialize / deserialize JSON Files in
 
 ## Installation
 
-Head over to my Script [JSONExample.cs](https://github.com/Pydes-boop/UnityJSON/blob/main/Assets/Scripts/JSONExample.cs) to yank the code and enjoy. If you want to stay for some Explanation look below.
+Head over to my Script [JSONExample.cs](https://github.com/Pydes-boop/UnityJSON/blob/main/Assets/Scripts/JSONExample.cs) for the main code. If you want to stay for some Explanation look below.
 
 ## JSON Serialization in Unity
 
