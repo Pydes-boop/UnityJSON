@@ -9,32 +9,32 @@ namespace JSON
     {
         public JSONdata _data;
         
-        [Tooltip("Click to load Sprite and EntityID")]
-        public bool loadEntityData = false;
+        [Tooltip("Click to data from File")]
+        public bool loadData = false;
     
-        [Tooltip("Click to save EntityData to JSON")]
-        public bool saveEntityData = false;
+        [Tooltip("Click to save data to JSON")]
+        public bool saveData = false;
         
-        private void saveEntityDataToJson()
+        private void saveDataToJson()
         {
             string json = JsonUtility.ToJson(_data);
             string path = Application.dataPath + "/Resources/Files/" + _data.name + ".json";
             System.IO.File.WriteAllText(path, json);
-            Debug.Log("Saved Entity Data of " + _data.name + " to " + path);
+            Debug.Log("Saved Data of " + _data.name + " to " + path);
         }
 
-        private void loadEntityDataFromJson()
+        private void loadDataFromJson()
         {
             string path = Application.dataPath + "/Resources/Files/" + _data.name + ".json";
             if (File.Exists(path))
             {
                 string json = File.ReadAllText(path);
                 _data = JsonUtility.FromJson<JSONdata>(json);
-                Debug.Log("Loaded Entity Data from " + path);
+                Debug.Log("Loaded Data from " + path);
             }
             else
             {
-                Debug.LogError("Loading Entity Data for " + _data.name + " not possible. Check if " + path + "exists.");
+                Debug.LogError("Loading Data for " + _data.name + " not possible. Check if " + path + "exists.");
             }
         }
         
@@ -42,14 +42,14 @@ namespace JSON
         {
             if (loadEntityData)
             {
-                loadEntityData = false;
-                loadEntityDataFromJson();
+                loadData = false;
+                loadDataFromJson();
             }
 
-            if (saveEntityData)
+            if (saveData)
             {
-                saveEntityData = false;
-                saveEntityDataToJson();
+                saveData = false;
+                saveDataToJson();
             }
         }
         
