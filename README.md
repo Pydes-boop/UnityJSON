@@ -1,6 +1,6 @@
 # Unity JSON
 
-Unity JSON is an example Project on how to serialize / deserialize JSON Files in Unity. You probably only need to download the script or read this though.
+This is an example Project on how to serialize / deserialize JSON Files in Unity because friends kept being confused why it didnt work how they knew it from other languages. You probably only need to download the script or read this though.
 
 ## Installation
 
